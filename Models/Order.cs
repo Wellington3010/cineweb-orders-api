@@ -14,8 +14,10 @@ namespace cineweb_orders_api.Models
         public Order() { }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public int OrderId { get; set; }
 
         public Guid UserId { get; set; }
 
