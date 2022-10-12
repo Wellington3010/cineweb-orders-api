@@ -1,0 +1,13 @@
+version: "2.2"
+
+services:
+ cineweb-orders-api:
+  container_name: cineweb-orders-api
+  image: cineweb-orders-api
+  environment:
+  - PORT=5000
+  ports:
+  - 5000:5000
+  build:
+   context: .
+   dockerfile: Dockerfile

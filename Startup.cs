@@ -1,4 +1,7 @@
+using AutoMapper;
 using cineweb_orders_api.Context;
+using cineweb_orders_api.DTO;
+using cineweb_orders_api.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +31,13 @@ namespace cineweb_orders_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var configuration = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<OrderDTO, Order>().ReverseMap();
+            });
+
+            IMapper mapper = configuration.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
