@@ -33,5 +33,13 @@ namespace cineweb_orders_api.Controllers
 
             return Ok();
         }
+
+        [Route("teste-api")]
+        [HttpGet]
+        public IActionResult TesteApi()
+        {
+
+            return Ok();
+        }
     }
 }
