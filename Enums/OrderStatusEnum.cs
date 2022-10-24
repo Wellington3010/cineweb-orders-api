@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace cineweb_orders_api.Enums
 {
-    public enum OrderStatusEnum
+    public enum StatusPedido
     {
         Pendente = 0,
         Pago = 1

@@ -8,24 +8,22 @@ using System.Threading.Tasks;
 
 namespace cineweb_orders_api.Models
 {
-    [Table("order")]
-    public class Order
+    [Table("pedido")]
+    public class Pedido
     {
-        public Order() { }
+        public Pedido() { }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int IdPedido { get; set; }
 
-        public int OrderId { get; set; }
+        public Guid UsuarioId { get; set; }
 
-        public Guid UserId { get; set; }
+        public Guid FilmeId { get; set; }
 
-        public Guid MovieId { get; set; }
+        public decimal ValorPedido { get; set; }
 
-        public decimal OrderAmount { get; set; }
-
-        public OrderStatusEnum Status { get; set; }
+        public StatusPedido Status { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

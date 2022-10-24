@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cineweb_orders_api.DTO
 {
-    public class OrderDTO
+    public class PedidoDTO
     {
         public int OrderId { get; set; }
 
@@ -16,6 +16,6 @@ namespace cineweb_orders_api.DTO
 
         public decimal OrderAmount { get; set; }
 
-        public OrderStatusEnum Status { get; set; }
+        public StatusPedido Status { get; set; }
     }
 }

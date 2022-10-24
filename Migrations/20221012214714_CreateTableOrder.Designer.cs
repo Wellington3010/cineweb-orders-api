@@ -8,7 +8,7 @@ using cineweb_orders_api.Context;
 
 namespace cineweb_orders_api.Migrations
 {
-    [DbContext(typeof(OrderContext))]
+    [DbContext(typeof(PedidoContext))]
     [Migration("20221012214714_CreateTableOrder")]
     partial class CreateTableOrder
     {

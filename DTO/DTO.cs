@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace cineweb_orders_api.DTO
 {
-    public class UserDTO
+    public class UsuarioDTO
     {
         public Guid UserId { get; set; }
     }

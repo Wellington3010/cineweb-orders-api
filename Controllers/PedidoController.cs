@@ -10,16 +10,16 @@ namespace cineweb_orders_api.Controllers
 {
     [Route("order")]
     [ApiController]
-    public class OrderController : ControllerBase
+    public class PedidoController : ControllerBase
     {
-        public OrderController()
+        public PedidoController()
         {
 
         }
 
         [Route("gerar")]
         [HttpPost]
-        public IActionResult GerarPedido(OrderDTO order)
+        public IActionResult GerarPedido(PedidoDTO order)
         {
 
             return Ok();
@@ -28,7 +28,7 @@ namespace cineweb_orders_api.Controllers
         // Deleta pedidos com status pendente do usuário com data de criação maior que três meses atrás.
         [Route("deletar-pedidos-pendentes")]
         [HttpDelete]
-        public IActionResult GerarPedido(UserDTO user)
+        public IActionResult GerarPedido(UsuarioDTO user)
         {
 
             return Ok();

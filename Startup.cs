@@ -10,12 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace cineweb_orders_api
 {
@@ -33,7 +28,7 @@ namespace cineweb_orders_api
         {
             var configuration = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<OrderDTO, Order>().ReverseMap();
+                cfg.CreateMap<PedidoDTO, Pedido>().ReverseMap();
             });
 
             IMapper mapper = configuration.CreateMapper();
@@ -45,7 +40,7 @@ namespace cineweb_orders_api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "cineweb_orders_api", Version = "v1" });
             });
 
-            services.AddDbContext<OrderContext, OrderContext>(options =>
+            services.AddDbContext<PedidoContext, PedidoContext>(options =>
             {
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
             });

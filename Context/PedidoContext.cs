@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace cineweb_orders_api.Context
 {
-    public class OrderContext : DbContext
+    public class PedidoContext : DbContext
     {
-        public OrderContext(DbContextOptions<OrderContext> options) : base(options) { }
+        public PedidoContext(DbContextOptions<PedidoContext> options) : base(options) { }
 
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Pedido> Orders { get; set; }
     }
 }
